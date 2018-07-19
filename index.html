@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flowers of love</title>
+<script src="js/three.min.js" data-ke-src="js/three.min.js"></script>
+<script src="js/stats.min.js" data-ke-src="js/stats.min.js"></script>
+<script src="js/loaders/OBJLoader.js" data-ke-src="js/loaders/OBJLoader.js"></script>
+<script src="js/loaders/MTLLoader.js" data-ke-src="js/loaders/MTLLoader.js"></script>
+<script src="js/loaders/DDSLoader.js" data-ke-src="js/loaders/DDSLoader.js"></script>
+<script src="js/controls/OrbitControls.js" data-ke-src="js/controls/OrbitControls.js"></script>
+<script src="js/loaders/GLTFLoader.js"></script>
+<script src="js/main.js"></script>
+<style type="text/css">
+body {
+	/* set margin to 0 and overflow to hidden, to go fullscreen */
+	margin: 0;
+	overflow: hidden;
+}
+#text {
+	background: linear-gradient(#e4e0ba, #f7d9aa);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+#canvas-frame {
+	/*border: none;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                background-color: #EEEEEE;*/
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: linear-gradient(#e4e0ba, #f7d9aa);
+}
+#nametext {
+	text-align: center;
+	font-size: 40px;
+	position: absolute;
+	top: 0;
+	width: 500px;
+	height: 80px;
+	left: 30%
+}
+</style>
+</head>
+
+<body>
+<div id="text" >
+  <h1 align="center"> Create flowers for your beloved!</h1>
+  <br>
+  <br>
+  <p align="center"><img src="pictures/heart.png" style="cursor:pointer;" onclick="threeStart()"></p>
+  <br>
+  <h1 align="center">(
+    <input id="textin" align="center" type="text" autofocus="autofocus" style="width:350px; height:40px; font-size:40px; text-align: center; background:transparent; border:0;" />
+    )</h1>
+</div>
+<div id="canvas-frame" onclick="onMouseClick()"></div>
+<div id="nametext">
+  <p id="name" align="center"></p>
+  <embed src="audio/piano_all.mp3" width="0" height="0" hidden="true" loop="true"> 
+</div>
+<script>
+	window.onload = start();
+	</script>
+</body>
+</html>
